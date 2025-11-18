@@ -1,7 +1,9 @@
 FROM firedrakeproject/firedrake:2025.10.2
+ARG NB_USER
+ARG NB_UID
+ENV USER ${NB_USER}
+ENV HOME /home/${NB_USER}
 
-### Make tmp home so we don't have permissions issues
-ENV HOME=/tmp
 WORKDIR ${HOME}
 
 RUN pip install jupyter notebook
