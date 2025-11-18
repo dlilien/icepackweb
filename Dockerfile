@@ -1,8 +1,8 @@
 FROM firedrakeproject/firedrake:2025.10.2
 ARG NB_USER
 ARG NB_UID
-ENV USER ${NB_USER}
-ENV HOME /home/${NB_USER}
+ENV USER=${NB_USER}
+ENV HOME=/home/${NB_USER}
 
 WORKDIR ${HOME}
 
