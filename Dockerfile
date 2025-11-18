@@ -1,4 +1,4 @@
-FROM docker.io/firedrakeproject/firedrake-vanilla:2025-10
+FROM firedrakeproject/firedrake:2025.10.2
 RUN pip install icepack
 
 ### create user with a home directory
