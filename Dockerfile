@@ -12,9 +12,10 @@ RUN adduser --disabled-password \
 
 WORKDIR ${HOME}
 
-RUN pip install jupyter notebook
 RUN apt update
 RUN apt install -yq patchelf
+RUN pip install jupyter notebook pygmsh
+RUN pip install rioxarray xarray rasterio pandas geopandas
 RUN git clone https://github.com/icepack/icepack.git
 RUN pip install --editable ./icepack
 RUN git clone https://github.com/dlilien/icepackweb.git
