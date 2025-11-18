@@ -1,4 +1,5 @@
 FROM firedrakeproject/firedrake-vanilla-default:2025.10.2
+RUN userdel -r ubuntu
 ARG NB_USER
 ARG NB_UID
 ENV USER=${NB_USER}
