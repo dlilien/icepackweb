@@ -15,5 +15,7 @@ WORKDIR ${HOME}
 RUN pip install jupyter notebook
 RUN apt update
 RUN apt install -yq patchelf
-RUN pip install icepack
+RUN git clone https://github.com/icepack/icepack.git
+RUN pip install --editable ./icepack
 RUN git clone https://github.com/dlilien/icepackweb.git
+WORKDIR ${HOME}/icepackweb
