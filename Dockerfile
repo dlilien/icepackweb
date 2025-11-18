@@ -13,7 +13,7 @@ RUN adduser --disabled-password \
 WORKDIR ${HOME}
 
 RUN apt update
-RUN apt install -yq patchelf
+RUN apt install -yq patchelf gmsh
 RUN pip install jupyter notebook pygmsh
 RUN pip install rioxarray xarray rasterio pandas geopandas
 RUN git clone https://github.com/icepack/icepack.git
